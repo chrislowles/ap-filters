@@ -8,27 +8,22 @@ Edits pushed to `main` are automatically synced to your account via GitHub Actio
 ## Setup
 
 ### 1. Get a Mastodon access token
-
-In your Mastodon instance:  
-**Preferences → Development → New Application**
-
-- Give it any name (e.g. `filter-sync`)
+In your Mastodon instance:
+**Preferences > Development > New Application**
+- Give it any name (e.g. `ap-filters`)
 - Scopes needed: `read:filters` + `write:filters`
 - Copy the **access token** after saving
 
 ### 2. Add repository secrets
-
-In your GitHub repo:  
-**Settings → Secrets and variables → Actions → New repository secret**
-
+In your GitHub repo:
+**Settings > Secrets and variables > Actions > New repository secret**
 | Secret name              | Value                           |
 |--------------------------|---------------------------------|
 | `MASTODON_BASE_URL`      | `https://your.instance.social` |
 | `MASTODON_ACCESS_TOKEN`  | The token from step 1           |
 
 ### 3. Create your filter files
-
-Add `.md` files to the `filters/` directory — one file per filter.
+Add `.md` files to the `filters/` directory — one file per filter, one line per keyword.
 
 ---
 
@@ -36,13 +31,13 @@ Add `.md` files to the `filters/` directory — one file per filter.
 
 ```markdown
 ---
-name: "Filter display name"   # required — must be unique across your filters
+name: "Filter display name"    # required — must be unique across your filters
 contexts:                      # which feeds to filter
   - home                       # home feed + lists
   - notifications
   - conversations              # alias for: thread
   - profiles                   # alias for: account
-  - public                     # public timelines
+  - public                     # public timelines (local + federated)
 action: warn                   # warn (show with warning) | hide (hide completely)
 whole_word: false              # default whole_word for all keywords in this file
 ---
@@ -80,8 +75,8 @@ partial [!w]       # force whole_word OFF for this line
 
 The sync runs automatically when you push changes to `filters/` or `sync.py` on `main`.
 
-You can also trigger it manually:  
-**Actions → Sync Mastodon Filters → Run workflow**
+You can also trigger it manually:
+**Actions > Sync Mastodon Filters > Run workflow**
 
 Manual runs have two optional checkboxes:
 - **Dry run** — prints planned changes without applying them (good for previewing)
