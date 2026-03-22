@@ -1,6 +1,6 @@
 ---
 name: "Something About Star Trek"
-# WOW DeSo has a big Star Trek community, no hate just working to mark relevant posts
+# No hate, just working to mark relevant posts (there's a LOT of them lol)
 contexts:
   - home
   - notifications
