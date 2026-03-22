@@ -57,7 +57,7 @@ def parse_filter_file(path: Path) -> dict:
         contexts    List of: home, notifications, public, thread/conversations,
                     account/profiles  (default: [home])
         action      warn | hide  (default: warn)
-        whole_word  true | false — default for all keywords (default: false)
+        whole_word  true | false - default for all keywords (default: false)
 
     Body:
         One keyword per line.
@@ -77,7 +77,7 @@ def parse_filter_file(path: Path) -> dict:
     try:
         fm = yaml.safe_load(parts[1]) or {}
     except yaml.YAMLError as e:
-        raise ValueError(f"{path.name}: invalid YAML frontmatter — {e}")
+        raise ValueError(f"{path.name}: invalid YAML frontmatter - {e}")
 
     if "name" not in fm:
         raise ValueError(f"{path.name}: frontmatter must include 'name'")
@@ -293,7 +293,7 @@ def main():
         sys.exit(1)
 
     if args.dry_run:
-        print("=== DRY RUN — no changes will be made ===\n")
+        print("=== DRY RUN - no changes will be made ===\n")
 
     print("Loading filter files...")
     desired = load_all_filters()
