@@ -8,11 +8,14 @@ contexts:
   - profiles
 action: warn
 ---
+Peter Theil
+Peter Thiel
 Mueller
 Politization
 Politicization
 #Politics
 George Santos
+Mike Pence
 Pence
 Republican
 Conservative
