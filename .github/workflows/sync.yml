@@ -1,0 +1,49 @@
+name: Sync Mastodon Filters
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "filters/**"
+      - "sync.py"
+  workflow_dispatch:
+    inputs:
+      prune:
+        description: "Delete Mastodon filters with no matching file"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Dry run (print changes, don't apply)"
+        type: boolean
+        default: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sync filters
+        env:
+          MASTODON_BASE_URL: ${{ secrets.MASTODON_BASE_URL }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.prune }}" = "true" ]; then
+            ARGS="$ARGS --prune"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python sync.py $ARGS
