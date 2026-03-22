@@ -1,9 +1,11 @@
 # ap-filters
 
-Manage your ActivityPub (Mastodon spec) content filters as files in Git.
-Edits pushed to `main` are automatically synced to your account via GitHub Actions.
+Manage your ActivityPub (Mastodon spec) content filters as files in a Git repo. Edits pushed to `main` are automatically synced to your account via GitHub Actions.
 
 ---
+
+## Why?
+I find editing filters in Mastodon's Web UI not to my liking, also filters aren't carried in account transfers, this keeps them around (I just have to swap the credentials in the Secrets and re-run the workflow) also maybe with the power of git and enough effort, subscribable filters might finally become a thing.
 
 ## Setup
 
@@ -27,11 +29,10 @@ Add `.md` files to the `filters/` directory - one file per filter, one line per 
 
 ---
 
-## Filter file format
-
+## Filter file example
 ```markdown
 ---
-name: "Filter display name"    # required - must be unique across your filters
+name: "Filter display name"    # required - overall descripter for the keywords, must be unique
 contexts:                      # which feeds to filter
   - home                       # home feed + lists
   - notifications
@@ -41,17 +42,14 @@ contexts:                      # which feeds to filter
 action: warn                   # warn (show with warning) | hide (hide completely)
 whole_word: false              # default whole_word for all keywords in this file
 ---
-
 # Lines starting with # are comments - ignored by the sync script.
 # One keyword per line.
-
 keyword one
 keyword two [w]    # force whole_word ON for this line
 partial [!w]       # force whole_word OFF for this line
 ```
 
 ### Context values
-
 | File value       | Mastodon context  | What it covers                  |
 |------------------|-------------------|---------------------------------|
 | `home`           | `home`            | Home feed and lists             |
@@ -61,7 +59,6 @@ partial [!w]       # force whole_word OFF for this line
 | `public`         | `public`          | Public/federated timelines      |
 
 ### Action values
-
 | Value  | Effect                                  |
 |--------|-----------------------------------------|
 | `warn` | Content is visible behind a warning     |
@@ -72,7 +69,6 @@ partial [!w]       # force whole_word OFF for this line
 ---
 
 ## Running the workflow
-
 The sync runs automatically when you push changes to `filters/` or `sync.py` on `main`.
 
 You can also trigger it manually:
@@ -87,7 +83,6 @@ Pruning is opt-in and never runs on automatic pushes, so you won't accidentally 
 ---
 
 ## Running locally
-
 ```bash
 pip install -r requirements.txt
 
