@@ -1,6 +1,6 @@
 ---
 name: "RE:"
-# Some Quote Reposts are busted, this is me both cleaning that up, IG is for reshares from Threads accounts I follow.
+# Quote Reposts from some platforms are busted, this is me at least marking for those instances, IG is for reshares from Threads accounts I follow.
 contexts:
   - home
   - notifications
