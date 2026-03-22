@@ -1,6 +1,6 @@
 # ap-filters
 
-Manage your ActivityPub (Mastodon spec) content filters as files in Git.  
+Manage your ActivityPub (Mastodon spec) content filters as files in Git.
 Edits pushed to `main` are automatically synced to your account via GitHub Actions.
 
 ---
@@ -23,7 +23,7 @@ In your GitHub repo:
 | `MASTODON_ACCESS_TOKEN`  | The token from step 1           |
 
 ### 3. Create your filter files
-Add `.md` files to the `filters/` directory — one file per filter, one line per keyword.
+Add `.md` files to the `filters/` directory - one file per filter, one line per keyword.
 
 ---
 
@@ -31,7 +31,7 @@ Add `.md` files to the `filters/` directory — one file per filter, one line pe
 
 ```markdown
 ---
-name: "Filter display name"    # required — must be unique across your filters
+name: "Filter display name"    # required - must be unique across your filters
 contexts:                      # which feeds to filter
   - home                       # home feed + lists
   - notifications
@@ -42,7 +42,7 @@ action: warn                   # warn (show with warning) | hide (hide completel
 whole_word: false              # default whole_word for all keywords in this file
 ---
 
-# Lines starting with # are comments — ignored by the sync script.
+# Lines starting with # are comments - ignored by the sync script.
 # One keyword per line.
 
 keyword one
@@ -67,7 +67,7 @@ partial [!w]       # force whole_word OFF for this line
 | `warn` | Content is visible behind a warning     |
 | `hide` | Content is hidden entirely              |
 
-> **Note:** Filters never expire — `expires_in` is intentionally omitted from all API calls.
+> **Note:** Filters are presumed as never expiring - `expires_in` is intentionally omitted from all API calls.
 
 ---
 
@@ -79,8 +79,8 @@ You can also trigger it manually:
 **Actions > Sync Mastodon Filters > Run workflow**
 
 Manual runs have two optional checkboxes:
-- **Dry run** — prints planned changes without applying them (good for previewing)
-- **Prune** — deletes filters on Mastodon that have no matching file in this repo
+- **Dry run** - prints planned changes without applying them (good for previewing)
+- **Prune** - deletes filters on Mastodon that have no matching file in this repo
 
 Pruning is opt-in and never runs on automatic pushes, so you won't accidentally delete anything.
 
