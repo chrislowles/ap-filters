@@ -1,5 +1,4 @@
 # ap-filters
-
 Manage your ActivityPub (Mastodon spec) content filters as files in a Git repo. Edits pushed to `main` are automatically synced to your account via GitHub Actions.
 
 ---
@@ -42,11 +41,11 @@ contexts:                      # which feeds to filter
 action: warn                   # warn (show with warning) | hide (hide completely)
 whole_word: false              # default whole_word for all keywords in this file
 ---
-# Lines starting with # are comments - ignored by the sync script.
-# One keyword per line.
-keyword one
-keyword two [w]    # force whole_word ON for this line
-partial [!w]       # force whole_word OFF for this line
+! Lines like this, ones starting with a ! are comments and are ignored by the sync script.
+keyword one        ! default options set by the frontmatter or sync script logic
+keyword two [w]    ! force whole_word ON for this line
+partial [!w]       ! force whole_word OFF for this line
+#deeznuts          ! hashtags work fine as keywords
 ```
 
 ### Context values
