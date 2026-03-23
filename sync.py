@@ -57,13 +57,13 @@ def parse_filter_file(path: Path) -> dict:
         contexts    List of: home, notifications, public, thread/conversations,
                     account/profiles  (default: [home])
         action      warn | hide  (default: warn)
-        whole_word  true | false - default for all keywords (default: false)
+        whole_word  true | false - default for all keywords in this file (default: false)
 
     Body:
         One keyword per line.
         Append  [w]  to force whole_word ON  for that line.
         Append  [!w] to force whole_word OFF for that line.
-        Lines starting with # are comments and are ignored.
+        Lines starting with ! are comments and are ignored.
     """
     text = path.read_text(encoding="utf-8")
 
@@ -111,7 +111,7 @@ def parse_filter_file(path: Path) -> dict:
     keywords = []
     for line in parts[2].splitlines():
         line = line.strip()
-        if not line or line.startswith("#"):
+        if not line or line.startswith("!"):
             continue
 
         whole_word = default_whole_word
