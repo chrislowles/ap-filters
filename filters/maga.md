@@ -1,6 +1,6 @@
 ---
 name: "MAGA"
-# Trump administration, associates, and broader MAGA orbit
+# Trump administration, associates, donors, media, and broader MAGA orbit
 contexts:
   - home
   - notifications
@@ -10,7 +10,7 @@ action: warn
 ---
 
 ! =====================================================================
-! MAGA / movement
+! MAGA / movement / orgs
 ! =====================================================================
 #MAGA [w]
 MAGA [w]
@@ -18,16 +18,29 @@ Make America Great Again
 #Trump
 #DOGE
 DOGE [w]
+Project 2025
+#Project2025
+Project2025 [w]
+Heritage Foundation [w]
+HeritageFoundation [w]
+Proud Boys [w]
+ProudBoys [w]
+Oath Keepers [w]
+OathKeepers [w]
+Three Percenters [w]
+ThreePercenters [w]
+Breitbart [w]
+InfoWars [w]
 
 ! =====================================================================
 ! Donald Trump
 ! =====================================================================
 Donald Trump [!w]
 #DonaldTrump
-TrumpTrain
+TrumpTrain [w]
 
 ! =====================================================================
-! JD Vance
+! JD Vance (Vice President)
 ! =====================================================================
 JD Vance [w]
 J.D. Vance [w]
@@ -35,7 +48,7 @@ James David Vance [w]
 Vance [w]
 
 ! =====================================================================
-! Robert F. Kennedy Jr. (HHS Secretary) — many spelling variants
+! Robert F. Kennedy Jr. (HHS Secretary)
 ! =====================================================================
 Robert F. Kennedy Jr.
 Robert F Kennedy Jr
@@ -46,6 +59,7 @@ RFK Jr. [w]
 RFK Jr [w]
 RFKJr [w]
 #RFKJr [w]
+Bobby Kennedy [w]
 
 ! =====================================================================
 ! Marco Rubio (Secretary of State)
@@ -59,11 +73,13 @@ MarcoRubio [w]
 Pete Hegseth [w]
 Peter Hegseth [w]
 PeteHegseth [w]
+Hegseth [w]
 
 ! =====================================================================
 ! Kash Patel (FBI Director)
 ! =====================================================================
 Kash Patel [w]
+Cash Patel [w]
 Kashyap Patel [w]
 KashPatel [w]
 
@@ -71,6 +87,7 @@ KashPatel [w]
 ! Tulsi Gabbard (Director of National Intelligence)
 ! =====================================================================
 Tulsi Gabbard [w]
+Tulsi Gabard [w]
 TulsiGabbard [w]
 
 ! =====================================================================
@@ -91,18 +108,21 @@ TomHoman [w]
 ! Kristi Noem (DHS Secretary)
 ! =====================================================================
 Kristi Noem [w]
+Kristy Noem [w]
 KristiNoem [w]
 
 ! =====================================================================
 ! Stephen Miller (Senior Advisor / immigration architect)
 ! =====================================================================
 Stephen Miller [w]
+Steve Miller [w]
 StephenMiller [w]
 
 ! =====================================================================
 ! Russell Vought (OMB Director)
 ! =====================================================================
 Russell Vought [w]
+Russel Vought [w]
 RussellVought [w]
 
 ! =====================================================================
@@ -112,11 +132,29 @@ Scott Bessent [w]
 ScottBessent [w]
 
 ! =====================================================================
+! Howard Lutnick (Commerce Secretary)
+! =====================================================================
+Howard Lutnick [w]
+HowardLutnick [w]
+
+! =====================================================================
 ! Doug Burgum (Interior Secretary)
 ! =====================================================================
 Doug Burgum [w]
 Douglas Burgum [w]
 DougBurgum [w]
+
+! =====================================================================
+! Chris Wright (Energy Secretary)
+! =====================================================================
+Chris Wright [w]
+ChrisWright [w]
+
+! =====================================================================
+! Lee Zeldin (EPA Administrator)
+! =====================================================================
+Lee Zeldin [w]
+LeeZeldin [w]
 
 ! =====================================================================
 ! Linda McMahon (Education Secretary)
@@ -125,15 +163,55 @@ Linda McMahon [w]
 LindaMcMahon [w]
 
 ! =====================================================================
+! Sean Duffy (Transportation Secretary)
+! =====================================================================
+Sean Duffy [w]
+SeanDuffy [w]
+
+! =====================================================================
+! Brooke Rollins (Agriculture Secretary)
+! =====================================================================
+Brooke Rollins [w]
+BrookeRollins [w]
+
+! =====================================================================
+! Kelly Loeffler (SBA Administrator)
+! =====================================================================
+Kelly Loeffler [w]
+KellyLoeffler [w]
+
+! =====================================================================
+! Susie Wiles (Chief of Staff)
+! =====================================================================
+Susie Wiles [w]
+Susan Wiles [w]
+SusieWiles [w]
+
+! =====================================================================
+! Mike Waltz (National Security Advisor)
+! =====================================================================
+Mike Waltz [w]
+Michael Waltz [w]
+MikeWaltz [w]
+
+! =====================================================================
 ! Brendan Carr (FCC Chair)
 ! =====================================================================
 Brendan Carr [w]
 BrendanCarr [w]
 
 ! =====================================================================
+! David Sacks (AI & Crypto Czar)
+! =====================================================================
+David Sacks [w]
+DavidSacks [w]
+
+! =====================================================================
 ! Vivek Ramaswamy (former DOGE co-lead)
 ! =====================================================================
 Vivek Ramaswamy [w]
+Vivek Ramaswami [w]
+Viveck Ramaswamy [w]
 Vivek [w]
 VivekRamaswamy [w]
 
@@ -183,8 +261,51 @@ DeSantis [w]
 ! Marjorie Taylor Greene
 ! =====================================================================
 Marjorie Taylor Greene [w]
+Marjorie Taylor Green [w]
+Margorie Taylor Greene [w]
 MarjorieTaylorGreene [w]
 MTG [w]
+
+! =====================================================================
+! Jim Jordan
+! =====================================================================
+Jim Jordan [w]
+James Jordan [w]
+JimJordan [w]
+
+! =====================================================================
+! Josh Hawley
+! =====================================================================
+Josh Hawley [w]
+Joshua Hawley [w]
+JoshHawley [w]
+
+! =====================================================================
+! Tom Cotton
+! =====================================================================
+Tom Cotton [w]
+Thomas Cotton [w]
+TomCotton [w]
+
+! =====================================================================
+! Ted Cruz
+! =====================================================================
+Ted Cruz [w]
+Rafael Cruz [w]
+TedCruz [w]
+
+! =====================================================================
+! Elise Stefanik
+! =====================================================================
+Elise Stefanik [w]
+Elise Stefanic [w]
+EliseStefanik [w]
+
+! =====================================================================
+! Paul Gosar
+! =====================================================================
+Paul Gosar [w]
+PaulGosar [w]
 
 ! =====================================================================
 ! Charlie Kirk (Turning Point USA)
@@ -194,6 +315,67 @@ CharlieKirk [w]
 Turning Point USA [w]
 TurningPointUSA [w]
 TPUSA [w]
+
+! =====================================================================
+! Candace Owens
+! =====================================================================
+Candace Owens [w]
+Candice Owens [w]
+CandaceOwens [w]
+
+! =====================================================================
+! Tucker Carlson
+! =====================================================================
+Tucker Carlson [w]
+TuckerCarlson [w]
+
+! =====================================================================
+! Ben Shapiro
+! =====================================================================
+Ben Shapiro [w]
+Benjamin Shapiro [w]
+BenShapiro [w]
+
+! =====================================================================
+! Matt Walsh
+! =====================================================================
+Matt Walsh [w]
+Matthew Walsh [w]
+MattWalsh [w]
+
+! =====================================================================
+! Alex Jones
+! =====================================================================
+Alex Jones [w]
+Alexander Jones [w]
+AlexJones [w]
+
+! =====================================================================
+! Tim Pool
+! =====================================================================
+Tim Pool [w]
+Timothy Pool [w]
+TimPool [w]
+Timcast [w]
+
+! =====================================================================
+! Jack Posobiec
+! =====================================================================
+Jack Posobiec [w]
+JackPosobiec [w]
+
+! =====================================================================
+! Dinesh D'Souza
+! =====================================================================
+Dinesh D'Souza [w]
+Dinesh DSouza [w]
+DineshDSouza [w]
+
+! =====================================================================
+! Sebastian Gorka
+! =====================================================================
+Sebastian Gorka [w]
+SebastianGorka [w]
 
 ! =====================================================================
 ! Steve Bannon
@@ -217,11 +399,19 @@ MichaelFlynn [w]
 General Flynn [w]
 
 ! =====================================================================
-! Peter Thiel (major MAGA donor/kingmaker)
+! Major donors / funders
 ! =====================================================================
 Peter Thiel [w]
 Peter Theil [w]
 PeterThiel [w]
+Robert Mercer [w]
+Rebekah Mercer [w]
+RobertMercer [w]
+RebekahMercer [w]
+Miriam Adelson [w]
+MiriamAdelson [w]
+Timothy Mellon [w]
+TimothyMellon [w]
 
 ! =====================================================================
 ! Groyper / adjacent movements
