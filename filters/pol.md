@@ -35,3 +35,24 @@ Tim Walz
 KamalaHarris
 TimWalz
 Graham Platner
+Senate [w]
+Congress [w]
+Filibuster [w]
+Bipartisan [w]
+Gerrymander [w]
+Gerrymandering [w]
+Third party [w]
+Swing state [w]
+Swing vote [w]
+#AusPol
+#UKPol
+#USPol
+#CDNPoli
+CDNPoli [w]
+EUPol [w]
+#EUPol
+Labour Party [w]
+Liberal Party [w]
+National Party [w]
+Greens [w]
+Tories [w]
