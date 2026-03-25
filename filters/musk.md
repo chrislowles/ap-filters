@@ -15,3 +15,18 @@ Tesla
 Twitter/X
 Xitter
 Hyperloop
+SpaceX
+#SpaceX
+Starlink
+#Starlink
+Neuralink
+#Neuralink
+xAI [w]
+#xAI
+Grok [w]
+X Corp [w]
+XCorp [w]
+X.com
+Boring Company [w]
+BoringCompany [w]
+#TeslaMotors
