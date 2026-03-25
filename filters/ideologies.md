@@ -10,12 +10,12 @@ action: warn
 ---
 
 ! Far-right / fascism
-Fascism [w]
-Fascist [w]
-Neo-Nazi [w]
-NeoNazi [w]
-Neo Nazi [w]
-Nazism [w]
+Fascism
+Fascist
+Neo-Nazi
+NeoNazi
+Neo Nazi
+Nazism
 Nazi [w]
 National Socialism [w]
 NationalSocialism [w]
