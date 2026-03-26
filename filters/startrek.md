@@ -1,5 +1,5 @@
 ---
-name: "Something About Star Trek"
+name: "Star Trek"
 # No hate, just working to mark relevant posts (there's a LOT of them lol)
 contexts:
   - home
