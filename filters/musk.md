@@ -1,5 +1,5 @@
 ---
-name: "Something About Musk"
+name: "Musk"
 # What else is there to say about this filter lol
 contexts:
   - home
