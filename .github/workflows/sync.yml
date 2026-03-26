@@ -11,7 +11,7 @@ on:
       prune:
         description: "Delete Mastodon filters with no matching file"
         type: boolean
-        default: false
+        default: true
       dry_run:
         description: "Dry run (print changes, don't apply)"
         type: boolean
