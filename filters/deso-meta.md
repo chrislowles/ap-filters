@@ -14,7 +14,6 @@ action: warn
 #Mastadon
 Bluesky
 Fedi Meta
-ActivityPub [w]
 #ActivityPub
 Fediverse
 #Nostr
