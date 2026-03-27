@@ -12,10 +12,9 @@ action: warn
 #Bluesky
 #Mastodon
 #Mastadon
-Bluesky
 Fedi Meta
+#FediMeta
 #ActivityPub
-Fediverse
 #Nostr
 Nostr [w]
 Pleroma [w]
@@ -39,3 +38,4 @@ Fediblock [w]
 AT Protocol [w]
 Decentralised social
 Federated social
+DeSo [w]
