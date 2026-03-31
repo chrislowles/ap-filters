@@ -1,6 +1,6 @@
 ---
 name: "MAGA"
-# Trump administration, associates, donors, media, and broader MAGA orbit
+# Trump administration, associates, donors, media, and broader MAGA orbit (all former and current)
 contexts:
   - home
   - notifications
