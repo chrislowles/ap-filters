@@ -1,6 +1,6 @@
 ---
 name: "Ideologies"
-# Posts referencing political and social ideologies — broad warning net
+# Posts referencing political and social terms — broad warning net (again don't think much, just pre-warning myself for posts that might contain sensitive material)
 contexts:
   - home
   - notifications
@@ -90,10 +90,10 @@ ChristianZionism [w]
 
 ! TERF / gender-critical
 TERF [w]
-#TERF
+#TERF [w]
 Gender Critical [w]
 GenderCritical [w]
-#GenderCritical
+#GenderCritical [w]
 Adult Human Female [w]
 Sex Realist [w]
 Gender Ideology [w]
@@ -105,7 +105,7 @@ AntiWoke [w]
 #Woke
 #AntiWoke
 DEI [w]
-#DEI
+#DEI [w]
 CRT [w]
 Critical Race Theory [w]
 CriticalRaceTheory [w]
@@ -124,7 +124,7 @@ Groomers [w]
 Globalist [w]
 Globalism [w]
 
-! Left-coded ideologies
+! Left-coded terms
 Tankie [w]
 #Tankie
 Accelerationism [w]
