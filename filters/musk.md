@@ -1,6 +1,6 @@
 ---
 name: "Musk"
-# What else is there to say about this filter lol
+# In a way, the reason I'm even writing this.
 contexts:
   - home
   - notifications
