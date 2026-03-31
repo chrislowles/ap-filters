@@ -1,10 +1,13 @@
 # ap-filters
-Manage your ActivityPub (Mastodon spec) content filters as files in a Git repo. Edits pushed to `main` are automatically synced to your account via GitHub Actions.
+Managing my ActivityPub (Mastodon spec) content filters as files in a Git repo. Edits pushed to `main` are automatically synced to your account via GitHub Actions.
 
 ---
 
 ## Why?
 I find editing filters in Mastodon's Web UI not to my liking, also filters aren't carried in account transfers, this keeps them around (I just have to swap the credentials in the Secrets and re-run the workflow) also maybe with the power of git and enough effort, subscribable filters might finally become a thing.
+
+## RE: My filters
+Don't think much about it, if you're using this just delete them.
 
 ## Setup
 
