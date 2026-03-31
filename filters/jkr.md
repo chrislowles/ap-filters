@@ -1,5 +1,6 @@
 ---
 name: "JKR"
+# JK Rowling and her works, known shithead.
 contexts:
   - home
   - notifications
@@ -7,6 +8,8 @@ contexts:
   - profiles
 action: warn
 ---
+JK Rowling
+JKRowling
+JK. Rowling
 Harry Potter [w]
 JKR [w]
-Potter [w]
