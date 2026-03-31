@@ -1,6 +1,6 @@
 ---
 name: "Odds"
-# Random filters, I presume you understand why I don't care to constantly see posts about this, social media is for posting about *more* than 5 different types of things
+# Random filters, too inconsequential to make a whole file on, social media is for posting about *more* than 5 different types of things
 contexts:
   - home
   - notifications
@@ -8,7 +8,11 @@ contexts:
   - profiles
 action: warn
 ---
+
+! Hashtags
 #WSocial
+
+! Creators
 Gamers Nexus
 GamersNexus
 Gamer Nexus
@@ -21,8 +25,8 @@ SamHyde
 Mr.Beast
 MrBeast
 Mr Beast
-Zesty Jesus
-ZestyJesus
+Mr. Beast
+
+! "Situations" idek how to sublabel these lmao
 Gamergate
-Mori Calliope
 Incel
