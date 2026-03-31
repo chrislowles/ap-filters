@@ -27,6 +27,6 @@ MrBeast
 Mr Beast
 Mr. Beast
 
-! "Situations" idek how to sublabel these lmao
+! idek how to sublabel these lmao
 Gamergate
 Incel
