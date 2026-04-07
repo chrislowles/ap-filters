@@ -1,6 +1,7 @@
 ---
 name: "Sociopolitical & Not"
 # Posts referencing sociopolitical matters and things often subject to politiczation — broad warning net (again don't think much about it, just pre-warning myself for posts that might contain sensitive material)
+enabled: false
 contexts:
   - home
   - notifications
