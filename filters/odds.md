@@ -1,6 +1,7 @@
 ---
 name: "Odds"
 # Random filters, too inconsequential to make a whole file on, social media is for posting about *more* than 5 different types of things
+enabled: false
 contexts:
   - home
   - notifications
