@@ -1,5 +1,6 @@
 ---
 name: "Domains & Paths"
+enabled: false
 contexts:
   - home
   - notifications
