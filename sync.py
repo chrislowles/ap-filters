@@ -58,6 +58,8 @@ def parse_filter_file(path: Path) -> dict:
                     account/profiles  (default: [home])
         action      warn | hide  (default: warn)
         whole_word  true | false - default for all keywords in this file (default: false)
+        enabled     true | false - if false, the filter will be deleted from Mastodon
+                    on the next sync and not re-created (default: true)
 
     Body:
         One keyword per line.
@@ -81,6 +83,9 @@ def parse_filter_file(path: Path) -> dict:
 
     if "name" not in fm:
         raise ValueError(f"{path.name}: frontmatter must include 'name'")
+
+    # Enabled flag — if False, the filter will be removed from Mastodon on sync
+    enabled = bool(fm.get("enabled", True))
 
     # Resolve contexts
     raw_contexts = fm.get("contexts", ["home"])
@@ -131,6 +136,7 @@ def parse_filter_file(path: Path) -> dict:
         "context": contexts,
         "filter_action": action,
         "keywords": keywords,
+        "enabled": enabled,
         "_source": path.name,
     }
 
@@ -140,8 +146,9 @@ def load_all_filters() -> list[dict]:
     for path in sorted(FILTERS_DIR.glob("*.md")):
         try:
             f = parse_filter_file(path)
+            status = "DISABLED" if not f["enabled"] else f"{len(f['keywords'])} keyword(s)"
             filters.append(f)
-            print(f"  Loaded: {path.name}  ({f['title']}, {len(f['keywords'])} keyword(s))")
+            print(f"  Loaded: {path.name}  ({f['title']}, {status})")
         except ValueError as e:
             print(f"  ERROR loading {path.name}: {e}")
             sys.exit(1)
@@ -237,6 +244,17 @@ def sync_filters(desired: list[dict], prune: bool, dry_run: bool) -> None:
 
     for f in desired:
         title = f["title"]
+
+        if not f["enabled"]:
+            # Filter is disabled — delete from Mastodon if it exists, otherwise skip
+            if title in existing_map:
+                print(f"  - Delete filter (disabled): '{title}'")
+                if not dry_run:
+                    api_delete(f"/api/v2/filters/{existing_map[title]['id']}")
+            else:
+                print(f"  . Skip filter (disabled, not on server): '{title}'")
+            continue
+
         if title in existing_map:
             ex = existing_map[title]
             # Check if the filter-level fields need updating
