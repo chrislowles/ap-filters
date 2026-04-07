@@ -43,6 +43,7 @@ contexts:                      # which feeds to filter
   - public                     # public timelines (local + federated)
 action: warn                   # warn (show with warning) | hide (hide completely)
 whole_word: false              # default whole_word for all keywords in this file
+enabled: true                  # set to false to delete this filter from Mastodon on next sync
 ---
 ! Lines like this, ones starting with a ! are comments and are ignored by the sync script.
 keyword one        ! default options set by the frontmatter or sync script logic
@@ -65,6 +66,14 @@ partial [!w]       ! force whole_word OFF for this line
 |--------|-----------------------------------------|
 | `warn` | Content is visible behind a warning     |
 | `hide` | Content is hidden entirely              |
+
+### Enabled flag
+| Value   | Effect                                                                          |
+|---------|---------------------------------------------------------------------------------|
+| `true`  | Default. Filter is synced normally.                                             |
+| `false` | Filter is deleted from Mastodon on the next sync. The file is kept in the repo. |
+
+Setting `enabled: false` is a soft toggle — it removes the filter server-side without you having to delete the file or use `--prune`. Useful for temporarily disabling a filter while keeping its keyword list intact for later.
 
 > **Note:** Filters are presumed as never expiring - `expires_in` is intentionally omitted from all API calls.
 
