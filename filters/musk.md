@@ -1,6 +1,7 @@
 ---
 name: "Musk"
 # In a way, the reason I'm even writing this.
+enabled: false
 contexts:
   - home
   - notifications
