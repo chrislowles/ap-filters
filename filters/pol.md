@@ -1,6 +1,7 @@
 ---
 name: "Politics"
 # This is merely a generic warning for pol posts, I'll probably add more.
+enabled: true
 contexts:
   - home
   - notifications
