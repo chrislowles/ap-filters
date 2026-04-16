@@ -1,7 +1,7 @@
 ---
 name: "DeSo Meta"
 # Meta posts about decentralized social media.
-enabled: false
+enabled: true
 contexts:
   - home
   - notifications
