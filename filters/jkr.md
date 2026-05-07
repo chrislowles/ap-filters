@@ -1,7 +1,7 @@
 ---
 name: "JKR"
 # JK Rowling and her works, known shithead.
-enabled: false
+enabled: true
 contexts:
   - home
   - notifications
