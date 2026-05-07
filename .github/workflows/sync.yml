@@ -1,4 +1,4 @@
-name: Sync Mastodon Filters
+name: Update Mastodon Filters
 
 on:
   push:
@@ -18,7 +18,7 @@ on:
         default: false
 
 jobs:
-  sync:
+  update-filters:
     runs-on: ubuntu-latest
 
     steps:
