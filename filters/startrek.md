@@ -1,7 +1,7 @@
 ---
 name: "Star Trek"
 # No hate, just working to mark relevant posts (there's a LOT of them lol)
-enabled: true
+enabled: false
 contexts:
   - home
   - notifications
