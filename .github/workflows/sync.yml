@@ -35,15 +35,20 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Sync filters
+        uses: nick-fields/retry@v3.0.2
         env:
           MASTODON_BASE_URL: ${{ secrets.MASTODON_BASE_URL }}
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-        run: |
-          ARGS=""
-          if [ "${{ github.event.inputs.prune }}" = "true" ]; then
-            ARGS="$ARGS --prune"
-          fi
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-            ARGS="$ARGS --dry-run"
-          fi
-          python sync.py $ARGS
+        with:
+          timeout_minutes: 30
+          max_attempts: 10
+          retry_wait_seconds: 120
+          command: |
+            ARGS=""
+            if [ "${{ github.event.inputs.prune }}" = "true" ]; then
+              ARGS="$ARGS --prune"
+            fi
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              ARGS="$ARGS --dry-run"
+            fi
+            python sync.py $ARGS
